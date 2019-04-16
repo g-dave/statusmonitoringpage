@@ -21,14 +21,11 @@ MYSQLPort=3306
 timeout 1 bash -c "</dev/tcp/${MYSQLHost}/${MYSQLPort}"; echo $?
 if [ "$?" -ne 0 ]; then
   echo "MYSQL Service DOWN"
-  #exit 1
 else
   echo "MYSQL Service UP" >> index.html
-  #exit 0
 fi
 
 echo -e "\n <br>"  >> index.html
-#echo "next" 
 ######################################################################
 
 ###
@@ -39,12 +36,9 @@ KOPANOPort=237 #237
 timeout 1 bash -c "</dev/tcp/${KOPANOHost}/${KOPANOPort}"; echo $?
 if [ "$?" -ne 0 ]; then
   echo "kopano Service DOWN"
-  #exit 1
 else
   echo "Kopano Service UP" >> index.html
-  #exit 0
 fi
-#echo "next" 
 ######################################################################
 
 
